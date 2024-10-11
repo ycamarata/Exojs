@@ -29,24 +29,74 @@ f() */
 
 const lettre = "ABCDEFGHJKLMNPQRSTUVWXY";
 const nombre = "0123456789";
-let plaque = "";
 
+
+
+/* function generePlaque(){
 for (i = 0; i < 2; i++) {
     plaque += lettre.charAt(Math.floor(Math.random() * (lettre.length)))
 }
 plaque += "-";
 /* console.log(plaque); */
 
-for (i = 0; i < 3; i++) {
+/* for (i = 0; i < 3; i++) {
     plaque += nombre.charAt(Math.floor(Math.random() * (nombre.length)))
 }
-plaque += "-";
+plaque += "-"; */
 /* console.log(plaque); */
 
-for (i = 0; i < 2; i++) {
+/* for (i = 0; i < 2; i++) {
     plaque += lettre.charAt(Math.floor(Math.random() * (lettre.length)))
 }
-plaque;
-console.log(plaque);
+ return plaque;
+}
+console.log(generePlaque()); */ 
 
+function genereLetter(){
+    let plaque = "";
+    for (i = 0; i < 2; i++) {
+        plaque += lettre.charAt(Math.floor(Math.random() * (lettre.length)));
+    }
+    return plaque;
+}
+//console.log(genereLetter())
+
+function genereNumber(){
+    let plaque = "-";
+    for (i = 0; i < 3; i++) {
+        plaque += nombre.charAt(Math.floor(Math.random() * (nombre.length)));
+    }
+    return plaque += "-";
+    
+    //return plaque;
+}
+//plaque += "-";
+
+function genererPlaque(){
+    let i = 50;
+    while ( i >0)
+    {
+        console.log(genereLetter() + genereNumber() + genereLetter());
+        i--;
+        console.log(i);
+    }
+    if () {
+      
+      }
+       else if () {
+       
+      }
+}
+genererPlaque();
+
+ /* function genererPlaque1(){
+    let i = 0;
+    while ( i <50)
+    {
+        console.log(genereLetter() + genereNumber() + genereLetter());
+        i++;
+        console.log(i);
+    }
+}
+genererPlaque1(); */
 
