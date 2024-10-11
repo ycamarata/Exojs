@@ -33,21 +33,20 @@ let plaque = "";
 
 for (i = 0; i < 2; i++) {
     plaque += lettre.charAt(Math.floor(Math.random() * (lettre.length)))
-
 }
 plaque += "-";
 /* console.log(plaque); */
 
 for (i = 0; i < 3; i++) {
     plaque += nombre.charAt(Math.floor(Math.random() * (nombre.length)))
-
 }
 plaque += "-";
 /* console.log(plaque); */
 
 for (i = 0; i < 2; i++) {
     plaque += lettre.charAt(Math.floor(Math.random() * (lettre.length)))
-
 }
 plaque;
 console.log(plaque);
+
+
