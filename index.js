@@ -164,3 +164,27 @@ document.getElementById('calcul').addEventListener('click', function (event) {
 
 //Photocopie
 
+let n = prompt('nombre de photocopie');
+n=parseInt(n);
+
+function calcul(){
+  let cout = 0;
+
+  if (isNaN(n) || n <= 0) {
+    alert("pas bon");
+  }else if (n>30) {
+    cout = 10*0.10 + 20*0.09 + (n-30)*0.08;
+    alert(cout + "euros")
+  }else if(n>10) {
+    cout = 10*0.10 + (n-10)*0.09;
+    alert(cout + "euros")
+  }else {
+    cout = n*0.10;
+    alert(cout + "euros")
+  }
+}
+calcul();
+
+//Impot
+
+
