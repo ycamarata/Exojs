@@ -104,50 +104,63 @@ genererPlaque1(); */
 }
 genererPlaque(); */
 
+//Exo Assurance!!!!!!!!!!!!
 
-
-function cherchesTarif(age, annéesDePermis, accident, fidelité) {
+/* function cherchesTarif(age, annéesDePermis, accident, fidelité) {
     let tarif = "";
-
     if (age < 25 && annéesDePermis < 2) {
         if (accident === 0) {
             tarif = "D";
         } else {
-            return "refusé";
+            return "Refusé";
         }
     }
-
     else if ((age < 25 && annéesDePermis >= 2) || (age >= 25 && annéesDePermis < 2)) {
         if (accident === 0) {
             tarif = "C";
         } else if (accident === 1) {
             tarif = "D";
         } else {
-            return "refusé"
+            return "Refusé";
         }
     }
-
-    else if (age > 25 && annéesDePermis >= 2) {
+    else if (age >= 25 && annéesDePermis >= 2) {
         if (accident === 0) {
             tarif = "B";
         } else if (accident === 1) {
             tarif = "C";
         } else if (accident === 2) {
             tarif = "D";
+        } else {
+            return "Refusé";
         }
-
     } else {
-        return "refusé"
+        return "Refusé";
+    }
+ 
+    if (fidelité > 1) {
+        if (tarif === "D") tarif = "C";
+        else if (tarif === "C") tarif = "B";
+        else if (tarif === "B") tarif = "A";
+    }
+    return tarif;
+}
+document.getElementById('calcul').addEventListener('click', function (event) {
+    event.preventDefault();
+    let age = parseInt(document.getElementById("age").value);
+    let annéesDePermis = parseInt(document.getElementById("annéesDePermis").value);
+    let accident = parseInt(document.getElementById("accident").value);
+    let fidelité = parseInt(document.getElementById("fidelité").value);
+  
+    if (isNaN(age) || isNaN(annéesDePermis) || isNaN(accident) || isNaN(fidelité)) {
+        document.getElementById("resultat").textContent = "Remplir correctement tous les champs!!!";
+        return;
     }
 
-if (fidelité > 1){
-    if ( tarif === "D") tarif ="C";
-    else if (tarif ==="C") tarif = "B";
-    else if ( tarif ==="B") tarif = "A";
-}
+    let tariffinal = cherchesTarif(age, annéesDePermis, accident, fidelité);
 
-console.log("tarif:")
+    document.getElementById("resultat").textContent = "Tarif : " + tariffinal;
+}); */
 
-return tarif;
-}
-console.log(cherchesTarif(31,13,1,13 ));
+//Photocopie
+
