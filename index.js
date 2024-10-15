@@ -164,7 +164,7 @@ document.getElementById('calcul').addEventListener('click', function (event) {
 
 //Photocopie
 
-let n = prompt('nombre de photocopie');
+/* let n = prompt('nombre de photocopie');
 n=parseInt(n);
 
 function calcul(){
@@ -183,8 +183,55 @@ function calcul(){
     alert(cout + "euros")
   }
 }
-calcul();
+calcul(); */
 
 //Impot
 
+/* function impot(age, homme, femme) {
+    let imposition = "Non imposable";
+   
+    if (femme && age > 18 && age <= 38) {
+        imposition = "Imposable";
+    } else if (homme && age > 18) {
+        imposition = "Imposable";
+    }
+    
+    return imposition;
+}
+
+document.getElementById('calcul').addEventListener('click', function (event) {
+    event.preventDefault();
+    let age = parseInt(document.getElementById("age").value);
+    let homme = document.getElementById("homme").checked;
+    let femme = document.getElementById("femme").checked;
+   
+    if (isNaN(age) || (!homme && !femme)) {
+        document.getElementById("resultat").textContent = "Remplir correctement tous les champs!!!";
+        return;
+    }
+
+    let impotfinal = impot(age, homme, femme);
+
+    document.getElementById("resultat").textContent = "Impot : " + impotfinal;
+}); */
+
+//étoiles décroissantes
+/* function etoilesdecroissante() {
+    let etoiles = 9;
+    for (let i = 0; i < 9; i++) {
+        console.log('*'.repeat(etoiles));
+        etoiles--;
+    }
+}
+etoilesdecroissante(); */
+
+//étoiles croissantes
+/* function etoilescroissantes(){
+    let etoiles = 1;
+    for (let i = 0; i < 9; i++) {
+        console.log('*'.repeat(etoiles));
+        etoiles++;
+    }
+}
+etoilescroissantes(); */
 
