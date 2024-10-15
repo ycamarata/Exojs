@@ -275,5 +275,30 @@ function nombre() {
 } */
 
     //Palindrome
+/*     function palindrome(mot) {
+        mot = mot.toLowerCase(); //convertir le mot en minuscules
+        let motInverse = mot.split('').reverse().join(''); // inverse le mot
+        return mot === motInverse; // Comparer le mot original et le mot inversé
+    }
+    let motUtilisateur = prompt("Entrer un mot:");
 
-    
+    if (palindrome(motUtilisateur)) {
+        console.log("true");
+    } else {
+        console.log("false");
+    } */
+
+ // Tour de hanoi
+
+/*  function hanoi(n, gauche, droite, auxiliaire) {
+    if (n === 0) {
+        return n;
+    }
+    hanoi(n - 1, gauche, auxiliaire, droite);
+    console.log(`Déplacer le disque ${n} - ${gauche} à ${droite}`);
+    hanoi(n - 1, auxiliaire, droite, gauche);
+}
+hanoi(3, 'A', 'C', 'B'); */
+
+//Rang de l'alphabet
+
