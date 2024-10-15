@@ -271,10 +271,10 @@ function nombre() {
     let input = document.getElementById('numbers').value;
     let array = input.split(',').map(Number); // split converti les chaine de caractere en tableaux / map permet de transformer les éléments d'un tableaux
     let tri = triABulle(array);
-    document.getElementById('result').innerText = tri.join(' - '); //join() converti le tableau en chaine de caratere, ('-')crée une séparation dans le tableau 
+    document.getElementById('result').innerText = tri.join(' - '); //join() converti le tableau en chaine de caractere, ('-')crée une séparation dans le tableau 
 } */
 
-    //Palindrome
+    //Palindrome  Palindrome= un mot qui se li dans les 2 sens
 /*     function palindrome(mot) {
         mot = mot.toLowerCase(); //convertir le mot en minuscules
         let motInverse = mot.split('').reverse().join(''); // inverse le mot
@@ -289,7 +289,6 @@ function nombre() {
     } */
 
  // Tour de hanoi
-
 /*  function hanoi(n, gauche, droite, auxiliaire) {
     if (n === 0) {
         return n;
@@ -302,3 +301,29 @@ hanoi(3, 'A', 'C', 'B'); */
 
 //Rang de l'alphabet
 
+/* function alphabetdecale(lettre) {
+    const n = 3; 
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let result = '';
+
+    for (let i = 0; i < lettre.length; i++) {
+        let nouvelleLettre = lettre[i];
+        let changerLettre = nouvelleLettre === nouvelleLettre.toUpperCase();
+        nouvelleLettre = nouvelleLettre.toLowerCase();
+
+        if (alphabet.includes(nouvelleLettre)) {
+            let newIndex = alphabet.indexOf(nouvelleLettre) + n;
+            if (newIndex >= 26) {
+                newIndex -= 26;
+            }
+            let finalLettre = alphabet[newIndex];
+            result += changerLettre ? finalLettre.toUpperCase() : finalLettre;
+        } else {
+            result += nouvelleLettre;
+        }
+    }
+    return result;
+}
+let texte = prompt("Texte à décaler :");
+let texteDecale = alphabetdecale(texte);
+console.log(texteDecale); */
