@@ -235,3 +235,45 @@ etoilesdecroissante(); */
 }
 etoilescroissantes(); */
 
+/*Occurrences*/
+/* function chercheOccurrences(t, x) {
+    let nombre = [];
+    t.forEach((valeur, index) => {
+        if (valeur === x) {
+            nombre.push(index);
+        }
+    });
+    return nombre;
+}
+function occurrences() {
+    let tableau = document.getElementById('tableau').getElementsByTagName('input');
+    let valeurs = Array.from(tableau).map(input => parseInt(input.value));
+    let x = parseInt(document.getElementById('valeur').value);
+    let nombre = chercheOccurrences(valeurs, x);
+    document.getElementById('resultat').textContent = 'Nombre : ' + nombre.join(', '); //join() converti le tableau en chaine de caratere
+} */
+
+/*tri à bulle*/
+/* function triABulle(array) {
+    let n = array.length;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                let temp = array[j]; //temp permet de stocker dans un tableau une variable temporairement pour la modifier pendant un échange de d'éléments
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+    return array;
+}
+function nombre() {
+    let input = document.getElementById('numbers').value;
+    let array = input.split(',').map(Number); // split converti les chaine de caractere en tableaux / map permet de transformer les éléments d'un tableaux
+    let tri = triABulle(array);
+    document.getElementById('result').innerText = tri.join(' - '); //join() converti le tableau en chaine de caratere, ('-')crée une séparation dans le tableau 
+} */
+
+    //Palindrome
+
+    
