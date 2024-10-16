@@ -216,10 +216,10 @@ document.getElementById('calcul').addEventListener('click', function (event) {
 }); */
 
 //étoiles décroissantes
-/* function etoilesdecroissante() {
+/*  function etoilesdecroissante() {
     let etoiles = 9;
     for (let i = 0; i < 9; i++) {
-        console.log('*'.repeat(etoiles));
+        console.log('* '.repeat(etoiles));
         etoiles--;
     }
 }
@@ -229,7 +229,7 @@ etoilesdecroissante(); */
 /* function etoilescroissantes(){
     let etoiles = 1;
     for (let i = 0; i < 9; i++) {
-        console.log('*'.repeat(etoiles));
+        console.log('* '.repeat(etoiles));
         etoiles++;
     }
 }
@@ -254,7 +254,7 @@ function occurrences() {
 } */
 
 /*tri à bulle*/
-/* function triABulle(array) {
+/*  function triABulle(array) {
     let n = array.length;
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n - i - 1; j++) {
@@ -265,16 +265,17 @@ function occurrences() {
             }
         }
     }
-    return array;
+    return array;   
 }
+
 function nombre() {
     let input = document.getElementById('numbers').value;
     let array = input.split(',').map(Number); // split converti les chaine de caractere en tableaux / map permet de transformer les éléments d'un tableaux
     let tri = triABulle(array);
     document.getElementById('result').innerText = tri.join(' - '); //join() converti le tableau en chaine de caractere, ('-')crée une séparation dans le tableau 
-} */
+}  */
 
-    //Palindrome  Palindrome= un mot qui se li dans les 2 sens
+//Palindrome  Palindrome= un mot qui se li dans les 2 sens
 /*     function palindrome(mot) {
         mot = mot.toLowerCase(); //convertir le mot en minuscules
         let motInverse = mot.split('').reverse().join(''); // inverse le mot
@@ -288,7 +289,7 @@ function nombre() {
         console.log("false");
     } */
 
- // Tour de hanoi
+// Tour de hanoi
 /*  function hanoi(n, gauche, droite, auxiliaire) {
     if (n === 0) {
         return n;
@@ -297,10 +298,19 @@ function nombre() {
     console.log(`Déplacer le disque ${n} - ${gauche} à ${droite}`);
     hanoi(n - 1, auxiliaire, droite, gauche);
 }
-hanoi(3, 'A', 'C', 'B'); */
+hanoi(3, 'A', 'C', 'B');  */
+
+//Algo Motif
+
+/* for (let i = 1; i < 6; i++) {
+    if (i % 2 !== 0) {
+        console.log("#*#*#*#*#*");
+    } else {
+        console.log("*#*#*#*#*#");
+    }
+} */
 
 //Rang de l'alphabet
-
 /* function alphabetdecale(lettre) {
     const n = 3; 
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -327,3 +337,50 @@ hanoi(3, 'A', 'C', 'B'); */
 let texte = prompt("Texte à décaler :");
 let texteDecale = alphabetdecale(texte);
 console.log(texteDecale); */
+
+/* Exo étoiles décroissant sans repeat */
+
+/* for(let i=9; i>=1; i--){
+    let ligne = '';
+    for(let j=1; j <= i; j++){
+        ligne += '* ';
+    }
+    console.log(ligne) 
+}*/
+
+/* Exo étoiles croissant sans repeat */
+
+/* for(let i=1; i<=9; i++){
+    let ligne = '';
+    for(let j=1; j <= i; j++){
+        ligne += '* ';
+    }
+    console.log(ligne)
+} */
+
+/* Mouhahaha */
+/* let mouah = "mouah";
+let ah = 5;  
+ 
+for (let i = 0; i < ah; i++) {
+   mouah += "ah";
+}
+console.log(mouah); */
+
+//Frais kilométrique
+const tariFKm = 0.6;
+const reducPassager = 0.5;
+
+let kilometres = parseInt(prompt("kilomètres:"));
+let passagers = parseInt(prompt("passagers :"));
+let reducTotale = passagers * reducPassager;
+let tarifFinalKm = tariFKm - reducTotale;
+ 
+if (tarifFinalKm < 0.1) {
+    tarifFinalKm = 0.1;
+}
+let frais = tarifFinalKm * kilometres;
+let prixPassager = (passagers > 0) ? frais / passagers : 0;
+ 
+console.log("Le montant total des frais est : " + frais.toFixed(2) + " euros");
+console.log("Le prix par passager est : " + prixPassager.toFixed(2) + " euros");
