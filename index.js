@@ -435,4 +435,45 @@ for (let i = 0; i < filtreEtudiants.length; i++) {
     console.log(filtreEtudiants[i].nom + " : " + filtreEtudiants[i].note);
 } */
 
-    
+//Impôts merci Laureline
+function impot(age, homme, femme,) {
+    let imposition = "Non imposable";
+    let tauxImposition;
+
+    if (femme && age > 18 && age <= 38) {
+        imposition = "Imposable";
+
+        if (femme && age < 25) {
+            //femme de moins de 25 ans, le taux = 8% de son âge
+            tauxImposition = age * 0.08;
+        } else {
+            //femme de 25 ans ou plus, le taux = 5% de son âge
+            tauxImposition = age * 0.05;
+        }
+    }
+
+    else if (homme && age > 18) {
+        imposition = "Imposable";
+
+        if (homme) {
+            //homme, le taux = 10% de son âge
+            tauxImposition = age * 0.10;
+        }
+    }
+    return imposition + (" à ") + tauxImposition;
+}
+
+document.getElementById('calcul').addEventListener('click', function (event) {
+    event.preventDefault();
+    let age = parseInt(document.getElementById("age").value);
+    let homme = document.getElementById("homme").checked;
+    let femme = document.getElementById("femme").checked;
+
+    if (isNaN(age) || (!homme && !femme)) {
+        document.getElementById("resultat").textContent = "Remplir correctement tous les champs!!!";
+        return;
+    }
+
+    let impotfinal = impot(age, homme, femme);
+    document.getElementById("resultat").textContent = "Impot : " + impotfinal + (" %");
+});
