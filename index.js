@@ -368,7 +368,7 @@ for (let i = 0; i < ah; i++) {
 console.log(mouah); */
 
 //Frais kilométrique
-const tariFKm = 0.6;
+/* const tariFKm = 0.6;
 const reducPassager = 0.5;
 
 let kilometres = parseInt(prompt("kilomètres:"));
@@ -383,4 +383,56 @@ let frais = tarifFinalKm * kilometres;
 let prixPassager = (passagers > 0) ? frais / passagers : 0;
  
 console.log("Le montant total des frais est : " + frais.toFixed(2) + " euros");
-console.log("Le prix par passager est : " + prixPassager.toFixed(2) + " euros");
+console.log("Le prix par passager est : " + prixPassager.toFixed(2) + " euros"); */
+
+// Tableau étudiants
+/* let etudiants = [
+    { nom: 'Agathe', note: 14 },
+    { nom: 'Wlad', note: 17 },
+    { nom: 'Yohann', note: 16 },
+    { nom: 'Laureline', note: 17 },
+    { nom: 'Christian', note: 12 },
+    { nom: 'Yannick', note: 19 },
+    { nom: 'Kaique', note: 17 },
+    { nom: 'Angélique', note: 18 },
+    { nom: 'Dorian', note: 15 },
+    { nom: 'emmanuel', note: 16 },
+    { nom: 'Jeremy', note: 13 },
+    { nom: 'Sylvain', note: 17 },
+    { nom: 'Yann', note: 15 },
+    { nom: 'Amin', note: 16 }
+];
+ 
+let filtreEtudiants = [];
+for (let i = 0; i < etudiants.length; i++) {
+    if (etudiants[i].note > 15) {
+        filtreEtudiants.push(etudiants[i]);
+    }
+}
+
+for (let i = 0; i < filtreEtudiants.length - 1; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < filtreEtudiants.length; j++) {
+        if (filtreEtudiants[j].nom.toLowerCase() < filtreEtudiants[minIndex].nom.toLowerCase()) {
+            minIndex = j;
+        }
+    }
+    if (minIndex !== i) {
+        let temp = filtreEtudiants[i];
+        filtreEtudiants[i] = filtreEtudiants[minIndex];
+        filtreEtudiants[minIndex] = temp;
+    }
+}
+
+let notes = 0;
+for (let i = 0; i < filtreEtudiants.length; i++) {
+    notes += filtreEtudiants[i].note;
+}
+let moyenneNotes = notes / filtreEtudiants.length;
+ 
+console.log("Étudiants note supérieure à 15 par ordre alphabétique:");
+for (let i = 0; i < filtreEtudiants.length; i++) {
+    console.log(filtreEtudiants[i].nom + " : " + filtreEtudiants[i].note);
+} */
+
+    
