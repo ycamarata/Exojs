@@ -436,7 +436,7 @@ for (let i = 0; i < filtreEtudiants.length; i++) {
 } */
 
 //Impôts merci Laureline
-function impot(age, homme, femme,) {
+/* function impot(age, homme, femme,) {
     let imposition = "Non imposable";
     let tauxImposition;
 
@@ -476,4 +476,4 @@ document.getElementById('calcul').addEventListener('click', function (event) {
 
     let impotfinal = impot(age, homme, femme);
     document.getElementById("resultat").textContent = "Impot : " + impotfinal + (" %");
-});
+}); */
