@@ -289,7 +289,7 @@ function nombre() {
         console.log("false");
     } */
 
-// Tour de hanoi
+//Tour de hanoi
 /*  function hanoi(n, gauche, droite, auxiliaire) {
     if (n === 0) {
         return n;
@@ -298,7 +298,7 @@ function nombre() {
     console.log(`Déplacer le disque ${n} - ${gauche} à ${droite}`);
     hanoi(n - 1, auxiliaire, droite, gauche);
 }
-hanoi(3, 'A', 'C', 'B');  */
+hanoi(3, 'A', 'C', 'B'); */
 
 //Algo Motif
 
@@ -318,8 +318,8 @@ hanoi(3, 'A', 'C', 'B');  */
 
     for (let i = 0; i < lettre.length; i++) {
         let nouvelleLettre = lettre[i];
-        let changerLettre = nouvelleLettre === nouvelleLettre.toUpperCase();
-        nouvelleLettre = nouvelleLettre.toLowerCase();
+       let changerLettre = nouvelleLettre === nouvelleLettre.toUpperCase();
+       nouvelleLettre = nouvelleLettre.toLowerCase();
 
         if (alphabet.includes(nouvelleLettre)) {
             let newIndex = alphabet.indexOf(nouvelleLettre) + n;
@@ -327,7 +327,7 @@ hanoi(3, 'A', 'C', 'B');  */
                 newIndex -= 26;
             }
             let finalLettre = alphabet[newIndex];
-            result += changerLettre ? finalLettre.toUpperCase() : finalLettre;
+            result += changerLettre ? finalLettre.toLowerCase() : finalLettre;
         } else {
             result += nouvelleLettre;
         }
@@ -402,38 +402,6 @@ console.log("Le prix par passager est : " + prixPassager.toFixed(2) + " euros");
     { nom: 'Yann', note: 15 },
     { nom: 'Amin', note: 16 }
 ];
- 
-let filtreEtudiants = [];
-for (let i = 0; i < etudiants.length; i++) {
-    if (etudiants[i].note > 15) {
-        filtreEtudiants.push(etudiants[i]);
-    }
-}
-
-for (let i = 0; i < filtreEtudiants.length - 1; i++) {
-    let minIndex = i;
-    for (let j = i + 1; j < filtreEtudiants.length; j++) {
-        if (filtreEtudiants[j].nom.toLowerCase() < filtreEtudiants[minIndex].nom.toLowerCase()) {
-            minIndex = j;
-        }
-    }
-    if (minIndex !== i) {
-        let temp = filtreEtudiants[i];
-        filtreEtudiants[i] = filtreEtudiants[minIndex];
-        filtreEtudiants[minIndex] = temp;
-    }
-}
-
-let notes = 0;
-for (let i = 0; i < filtreEtudiants.length; i++) {
-    notes += filtreEtudiants[i].note;
-}
-let moyenneNotes = notes / filtreEtudiants.length;
- 
-console.log("Étudiants note supérieure à 15 par ordre alphabétique:");
-for (let i = 0; i < filtreEtudiants.length; i++) {
-    console.log(filtreEtudiants[i].nom + " : " + filtreEtudiants[i].note);
-} */
 
 //Impôts merci Laureline
 /* function impot(age, homme, femme,) {
@@ -477,3 +445,199 @@ document.getElementById('calcul').addEventListener('click', function (event) {
     let impotfinal = impot(age, homme, femme);
     document.getElementById("resultat").textContent = "Impot : " + impotfinal + (" %");
 }); */
+
+//tableau étudiants
+let etudiants = [
+    { nom: 'Agathe', note: 14 },
+    { nom: 'Wlad', note: 17 },
+    { nom: 'Yohann', note: 16 },
+    { nom: 'Laureline', note: 17 },
+    { nom: 'Christian', note: 12 },
+    { nom: 'Yannick', note: 19 },
+    { nom: 'Kaique', note: 17 },
+    { nom: 'Angélique', note: 18 },
+    { nom: 'Dorian', note: 15 },
+    { nom: 'emmanuel', note: 16 },
+    { nom: 'Jeremy', note: 13 },
+    { nom: 'Sylvain', note: 17 },
+    { nom: 'Yann', note: 15 },
+    { nom: 'Amin', note: 16 },
+    { nom: "Alice", note: 85 },
+    { nom: "benjamin", note: 92 },
+    { nom: "Claire", note: 78 },
+    { nom: "david", note: 88 },
+    { nom: "Emma", note: 95 },
+    { nom: "fabien", note: 67 },
+    { nom: "Gabriel", note: 90 },
+    { nom: "helene", note: 73 },
+    { nom: "Isabelle", note: 82 },
+    { nom: "jacques", note: 76 },
+    { nom: "Kevin", note: 89 },
+    { nom: "laura", note: 91 },
+    { nom: "Marc", note: 84 },
+    { nom: "nathalie", note: 79 },
+    { nom: "Olivier", note: 87 },
+    { nom: "pierre", note: 93 },
+    { nom: "Quentin", note: 80 },
+    { nom: "roxane", note: 77 },
+    { nom: "Sophie", note: 94 },
+    { nom: "thomas", note: 86 },
+    { nom: "Ulysse", note: 81 },
+    { nom: "valerie", note: 75 },
+    { nom: "William", note: 83 },
+    { nom: "xavier", note: 70 },
+    { nom: "Yann", note: 88 },
+    { nom: "zoe", note: 92 },
+    { nom: "Adrien", note: 85 },
+    { nom: "brigitte", note: 78 },
+    { nom: "Camille", note: 89 },
+    { nom: "damien", note: 91 },
+    { nom: "Elise", note: 87 },
+    { nom: "françois", note: 76 },
+    { nom: "Gaëlle", note: 84 },
+    { nom: "hugo", note: 93 },
+    { nom: "Ingrid", note: 79 },
+    { nom: "julien", note: 88 },
+    { nom: "Karine", note: 82 },
+    { nom: "lucas", note: 90 },
+    { nom: "Mathilde", note: 95 },
+    { nom: "nicolas", note: 77 },
+    { nom: "Océane", note: 86 },
+    { nom: "paul", note: 80 },
+    { nom: "Quentin", note: 83 },
+    { nom: "rachel", note: 75 },
+    { nom: "Samuel", note: 92 },
+    { nom: "thibault", note: 89 },
+    { nom: "Ursula", note: 78 },
+    { nom: "vincent", note: 91 },
+    { nom: "Wendy", note: 87 },
+    { nom: "xena", note: 76 },
+    { nom: "Yasmine", note: 84 },
+    { nom: "zacharie", note: 93 },
+    { nom: "Amélie", note: 79 },
+    { nom: "bruno", note: 88 },
+    { nom: "Chloé", note: 82 },
+    { nom: "dylan", note: 90 },
+    { nom: "Estelle", note: 95 },
+    { nom: "fabrice", note: 77 },
+    { nom: "Géraldine", note: 86 },
+    { nom: "henri", note: 80 },
+    { nom: "Inès", note: 83 },
+    { nom: "jean", note: 75 },
+    { nom: "Kévin", note: 92 },
+    { nom: "léa", note: 89 },
+    { nom: "Mélanie", note: 78 },
+    { nom: "nathan", note: 91 },
+    { nom: "Ophélie", note: 87 },
+    { nom: "patrick", note: 76 },
+    { nom: "Quentin", note: 84 },
+    { nom: "rémi", note: 93 },
+    { nom: "Sarah", note: 79 },
+    { nom: "théo", note: 88 },
+    { nom: "Ugo", note: 82 },
+    { nom: "valentin", note: 90 },
+    { nom: "Wendy", note: 95 },
+    { nom: "xavier", note: 77 },
+    { nom: "Yohan", note: 86 },
+    { nom: "zoé", note: 80 },
+    { nom: "Antoine", note: 83 },
+    { nom: "bernadette", note: 75 },
+    { nom: "Cédric", note: 92 },
+    { nom: "diane", note: 89 },
+    { nom: "Élodie", note: 78 },
+    { nom: "franck", note: 91 },
+    { nom: "Guillaume", note: 87 },
+    { nom: "hélène", note: 76 },
+    { nom: "Isabelle", note: 84 },
+    { nom: "jules", note: 93 },
+    { nom: "Kevin", note: 79 },
+    { nom: "laetitia", note: 88 },
+    { nom: "Maxime", note: 82 },
+    { nom: "nadine", note: 90 },
+    { nom: "Olivier", note: 95 },
+    { nom: "pascal", note: 77 },
+    { nom: "Quentin", note: 86 },
+    { nom: "romain", note: 80 },
+    { nom: "Stéphanie", note: 83 },
+    { nom: "thomas", note: 75 },
+    { nom: "Ulysse", note: 92 },
+    { nom: "valérie", note: 89 }
+
+];
+
+let n = etudiants.length;
+let etudiantsSelectionnes = [];
+const adieuAccent = { 'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e', 'É': 'E' }
+
+// Mettre la premiére lettre en majuscule
+let minuscules = 'abcdefghijklmnopqrstuvwxyz';
+let maj = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function virerAccent(etudiantsSelectionnes) {
+    return adieuAccent[etudiantsSelectionnes[0]] || etudiantsSelectionnes;
+}
+// Trie les notes au dessus de 15
+for (let m = 0; m < etudiants.length; m++) {
+    if (etudiants[m].note > 15) {
+        etudiantsSelectionnes.push(etudiants[m]);
+    }
+}
+//parcourir les étudiants
+let e = 0;
+while (e < etudiants.length) {
+    let nom = etudiants[e].nom;
+    let premiereLettre = nom[0];
+    let resteNom = "";
+
+    // parcourir l'index
+    let l = 1;
+    while (l < nom.length) {
+        resteNom += nom[l];
+        l++;
+    }
+
+    // Premiere lettre en maj
+    let premiereLettreMaj = premiereLettre;
+
+    //boucle pour chercher les majs et minuscule
+    for (let a = 0; a < minuscules.length; a++) {
+        if (premiereLettre === minuscules[a]) {
+            premiereLettreMaj = maj[a];
+        }
+    }
+    // nom de l'étudiant obtient sa premiere lettre en maj
+    etudiants[e].nom = premiereLettreMaj + resteNom;
+    e++;
+
+    // Échange des éléments
+    let echange = true
+    while (echange) {
+        echange = false
+        for (let i = 0; i < etudiantsSelectionnes.length - 1; i++) {
+            let nom1 = virerAccent(etudiantsSelectionnes[i].nom);
+            let nom2 = virerAccent(etudiantsSelectionnes[i + 1].nom);
+            let k = 0;
+            while (k < nom1.length && k < nom2.length) {
+                if (nom1[k] > nom2[k]) {
+                    let temp = etudiantsSelectionnes[i];
+                    etudiantsSelectionnes[i] = etudiantsSelectionnes[i + 1];
+                    etudiantsSelectionnes[i + 1] = temp;
+                    echange = true
+                    break;
+                } else if (nom1[k] < nom2[k]) {
+                    break;
+                }
+                k++
+            }
+        }
+    }
+    //moyenne des notes
+    let sommeNotes = 0;
+    for (let i = 0; i < etudiants.length; i++) {
+        sommeNotes += etudiants[i].note;
+    }
+    let moyenneNotes = sommeNotes / etudiants.length;
+    console.log(moyenneNotes)
+
+}
+console.log(etudiantsSelectionnes)
